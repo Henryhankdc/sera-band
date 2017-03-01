@@ -1,0 +1,38 @@
+{
+  "name": "sep-des",
+  "version": "1.0.0",
+  "description": "## TODO",
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "axios": "^0.15.3",
+    "babel-preset-es2015-rollup": "^3.0.0",
+    "babel-preset-react": "^6.23.0",
+    "browser-sync": "^2.18.8",
+    "classnames": "^2.2.5",
+    "del": "^2.2.2",
+    "eslint-plugin-react": "^6.10.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^1.11.1",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "require-dir": "^0.3.1",
+    "rollup": "^0.39.2",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-commonjs": "^7.0.0",
+    "rollup-plugin-eslint": "^3.0.0",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-plugin-replace": "^1.1.1"
+  },
+  "scripts": {
+    "clean": "gulp clean",
+    "scripts": "gulp scripts",
+    "serve": "gulp serve",
+    "styles": "gulp styles",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,14 @@
+.text__container {
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+}
+
+.text__content {
+  text-align: center;
+  padding: $unit;
+  margin-bottom: 5vh;
+}

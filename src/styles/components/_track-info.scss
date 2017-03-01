@@ -1,0 +1,81 @@
+.song-info__title {
+  @extend %font-default-em;
+
+  color: $color-text;
+  margin-bottom: $unit;
+  text-transform: lowercase;
+
+  &::before {
+    @extend %font-default;
+
+    color: tint($color-text, 15%);
+    counter-increment: tracklist;
+    content: counter(tracklist) ". ";
+    padding-right: $unit / 4;
+    font-size: $unit * .75;
+  }
+}
+
+.song-info__lyrics {
+  text-transform: lowercase;
+
+  span:not(:last-of-type) {
+    &::after {
+      content: ' // ';
+      color: $color-text-inverse;
+    }
+  }
+}
+
+.song-info__container {
+  bottom: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.song-info__panel {
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: opacity 1s ease-out;
+
+  .song-info__container--lyrics &--lyrics {
+    opacity: 1;
+  }
+
+  .song-info__container--img &--img {
+    opacity: 1;
+  }
+}
+
+.song-info__content {
+  text-align: center;
+  padding: $unit;
+  margin-bottom: 5vh;
+}
+
+.song-info__img {
+  max-width: 80%;
+}
+
+.song-info__toggle-button {
+  position: absolute;
+  bottom: 2vw;
+}
+
+.song-info__play-button {
+  background: $color-primary;
+  border: none;
+  border-radius: 50%;
+  color: $color-background;
+  height: $unit *3;
+  width: $unit *3;
+}

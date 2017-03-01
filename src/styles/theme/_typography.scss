@@ -1,0 +1,45 @@
+%all-fonts {
+  .wf-loading & {
+    visibility: hidden;
+  }
+}
+
+%font-default {
+  @extend %all-fonts;
+
+  font-family: $font-display;
+  font-style: normal;
+  font-weight: 400;
+}
+
+%font-default-em {
+  @extend %all-fonts;
+
+  font-family: $font-display;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.h1 {
+  @extend %font-default;
+
+  font-size: 1.7em;
+  line-height: 1;
+  margin-bottom: 0;
+  margin-top: 0;
+  text-transform: uppercase;
+}
+
+.h2 {
+  @extend %font-default;
+
+  font-size: 1em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.body {
+  @extend %font-default-em;
+
+  text-transform: lowercase;
+}

@@ -1,0 +1,41 @@
+// colors
+
+$color-primary: hsl(231, 6%, 53%);
+$color-text: shade($color-primary, 30%);
+$color-text-inverse: tint($color-primary, 20%);
+$color-background: hsl(0, 0%, 100%);
+$color-background-translucent: transparentize(hsl(0, 0%, 100%), 0.1);
+$color-link: mix(hsl(200, 60%, 35%), $color-primary, 80%);
+
+
+// font stacks
+
+$font-default: 'utopia-std', serif;
+$font-display: 'utopia-std-display', serif;
+
+
+// layout
+
+$border-width-sm: 1.25em;
+$border-width-md: 1.75em;
+$border-width-lg: 2.25em;
+$unit: 1em;
+$height-nav: $unit * 4;
+
+
+// theme
+
+$box-shadow-default: 0 0 ($unit / 2) transparentize($color-primary, 0.75);
+
+
+// z
+
+$z-bottom: -1;
+
+
+// mqs
+
+$mq-sm: 'screen and (min-width: 20em)';
+$mq-md: 'screen and (min-width: 40em)';
+$mq-lg: 'screen and (min-width: 60em)';
+$mq-xl: 'screen and (min-width: 80em)';

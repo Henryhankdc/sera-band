@@ -1,0 +1,43 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  @extend %font-default;
+
+  color: $color-text;
+  counter-reset: tracklist;
+  margin: 0;
+
+  em {
+    @extend %font-default-em;
+  }
+}
+
+a,
+a:link,
+a:hover {
+  color: $color-link;
+}
+
+img {
+  max-width: 100%;
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}

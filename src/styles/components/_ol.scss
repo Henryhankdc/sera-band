@@ -1,0 +1,23 @@
+.ol__container {
+  counter-reset: orderedlist;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ol__item {
+  @extend %font-default-em;
+
+  color: $color-primary;
+  text-transform: lowercase;
+
+  &::before {
+    @extend %font-default;
+
+    color: shade($color-primary, 15%);
+    content: counter(orderedlist) ". ";
+    counter-increment: orderedlist;
+    padding-right: $unit / 4;
+    font-size: $unit * .75;
+  }
+}

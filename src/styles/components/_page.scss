@@ -1,0 +1,26 @@
+.page__container {
+  border-color: $color-primary;
+  border-style: solid;
+  border-width: $border-width-sm;
+  height: calc(100vh - #{$height-nav});
+  position: fixed;
+  top: 100vh;
+  transition: top 1s ease-out;
+  width: 100vw;
+
+  @media #{$mq-md} {
+    border-width: $border-width-md;
+  }
+
+  @media #{$mq-lg} {
+    border-width: $border-width-lg;
+  }
+}
+
+.page__container--active {
+  top: 0;
+}
+
+.page__container--alternate {
+  border-color: $color-background;
+}

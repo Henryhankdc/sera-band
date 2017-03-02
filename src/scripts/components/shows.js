@@ -1,13 +1,15 @@
 import React from 'react';
 import axios from 'axios/dist/axios';
+import moment from 'moment';
 
 class Shows extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      shows: [],
+      futureShows: [],
       loading: true,
+      pastShows: [],
       error: null
     };
   }
@@ -15,11 +17,25 @@ class Shows extends React.Component {
   componentDidMount() {
     axios.get('http://sera.malaparte.media/wp-json/wp/v2/shows')
       .then(res => {
-        const shows = res.data;
+        function compareDates(showA, showB) {
+          return moment(showA.acf.date, 'YYYYMMDD').format('X') - moment(showB.acf.date, 'YYYYMMDD').format('X');
+        }
+
+        function isFutureShow(show) {
+          return moment(show.acf.date, 'YYYYMMDD').isSameOrAfter(moment());
+        }
+
+        function isPastShow(show) {
+          return moment(show.acf.date, 'YYYYMMDD').isBefore(moment());
+        }
+
+        const futureShows = res.data.filter(isFutureShow).sort(compareDates).reverse();
+        const pastShows = res.data.filter(isPastShow).sort(compareDates).reverse();
 
         this.setState({
-          shows,
+          futureShows,
           loading: false,
+          pastShows,
           error: null
         });
       })
@@ -49,14 +65,27 @@ class Shows extends React.Component {
     }
 
     return (
-      <ul>
-        {this.state.shows.map(show =>
-          <li key={show.id}>
-            <p>{show.acf.date}</p>
-            <p>{show.title.rendered}</p>
-          </li>
-        )}
-      </ul>
+      <section>
+        <h3>Future Shows</h3>
+        <ul>
+          {this.state.futureShows.map(show =>
+            <li key={show.id}>
+              <p>{show.acf.date}</p>
+              <p>{show.title.rendered}</p>
+            </li>
+          )}
+        </ul>
+
+        <h3>Past Shows</h3>
+        <ul>
+          {this.state.pastShows.map(show =>
+            <li key={show.id}>
+              <p>{show.acf.date}</p>
+              <p>{show.title.rendered}</p>
+            </li>
+          )}
+        </ul>
+      </section>
     );
   }
 

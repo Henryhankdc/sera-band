@@ -18,6 +18,10 @@ body {
   em {
     @extend %font-default-em;
   }
+
+  @supports (text-rendering: optimizeLegibility) {
+    text-rendering: optimizeLegibility;
+  }
 }
 
 a,

@@ -52,25 +52,50 @@ class Shows extends React.Component {
       <ul>
         {this.state.releases.map(release =>
           <li key={release.id}>
-            <h2>{release.title.rendered}</h2>
             <img src={release.acf.cover.url} />
+            <h2>{release.title.rendered}</h2>
+            <p>{release.acf.release_date}</p>
             <ul>
               <li>
+                <svg className="icon">
+                  <use xlinkHref="#soundcloud" />
+                </svg>
                 <a href={release.acf.soundcloud_link}>Soundcloud</a>
               </li>
               <li>
+                <svg className="icon">
+                  <use xlinkHref="#bandcamp" />
+                </svg>
                 <a href={release.acf.bandcamp_link}>Bandcamp</a>
               </li>
               <li>
+                <svg className="icon">
+                  <use xlinkHref="#spotify" />
+                </svg>
                 <a href={release.acf.spotify_link}>Spotify</a>
               </li>
               <li>
+                <svg className="icon">
+                  <use xlinkHref="#youtube" />
+                </svg>
+                <a href={release.acf.youtube_link}>Youtube</a>
+              </li>
+              <li>
+                <svg className="icon">
+                  <use xlinkHref="#apple-music" />
+                </svg>
                 <a href={release.acf.apple_music_link}>Apple Music</a>
               </li>
               <li>
+                <svg className="icon">
+                  <use xlinkHref="#google-play" />
+                </svg>
                 <a href={release.acf.google_play_link}>Google Play</a>
               </li>
               <li>
+                <svg className="icon">
+                  <use xlinkHref="#amazon-music" />
+                </svg>
                 <a href={release.acf.amazon_music_link}>Amazon Music</a>
               </li>
             </ul>

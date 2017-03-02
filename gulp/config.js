@@ -7,6 +7,8 @@ module.exports = {
   scriptsSrcName: 'main.js',
   scriptsSrc: './src/scripts/main.js',
   scriptsSrcDir: './src/scripts/',
+  spritesSrc: './src/assets/vectors/icons/*.svg',
+  spritesSrcDir: './src/assets/vectors/icons',
   stylesCompiled: './.tmp/styles/main.css',
   stylesCompiledDir: './.tmp/styles/',
   stylesSrc: './src/styles/main.scss',

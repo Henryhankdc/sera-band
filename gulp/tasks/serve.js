@@ -5,22 +5,22 @@ const config = require('../config');
 const gulp = require('gulp');
 
 // Static server
-gulp.task('serve', ['clean', 'scripts', 'styles'], function() {
+gulp.task('serve', ['clean', 'sprite', 'scripts', 'styles'], function() {
   bs.init({
     open: 'external',
     port: 3001,
     xip: true,
     server: {
       baseDir: [
-        config.rootDir,
         config.tmpDir
       ]
     }
   });
 
   // watch source files
-  bs.watch(config.rootDir + 'index.html', bs.reload);
+  bs.watch(config.tmpDir + 'index.html', bs.reload);
   bs.watch(config.scriptsCompiledDir, bs.reload);
+  gulp.watch([config.spritesSrcDir + '**/*.js', config.rootDir + 'index.html'], ['sprites']);
   gulp.watch(config.scriptsSrcDir + '**/*.js', ['scripts']);
   gulp.watch(config.stylesSrcDir + '**/*.scss', ['styles']);
 

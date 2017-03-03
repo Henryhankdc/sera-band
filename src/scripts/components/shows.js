@@ -20,7 +20,7 @@ class Shows extends React.Component {
   componentDidMount() {
     axios.get('http://sera.malaparte.media/wp-json/wp/v2/shows')
       .then(res => {
-        const futureShows = res.data.filter(this.isFutureShow).sort(this.compareDates).reverse();
+        const futureShows = res.data.filter(this.isFutureShow).sort(this.compareDates);
         const pastShows = res.data.filter(this.isPastShow).sort(this.compareDates).reverse();
 
         this.setState({
@@ -77,7 +77,7 @@ class Shows extends React.Component {
       <section>
         {this.state.futureShows &&
           <div>
-            <h3 className='h6'>Future Shows</h3>
+            <h3 className='h6'>Upcoming Shows</h3>
             <ul className='gutter-row--lg'>
               {this.state.futureShows.map(show =>
                 <li
@@ -171,7 +171,7 @@ class Shows extends React.Component {
   render() {
     return (
       <section className='section'>
-        <h2 className='h1'>Shows</h2>
+        <h2 className='h1'>Live</h2>
         {this.state.loading ?
           this.renderLoading()
           : this.renderPosts()}

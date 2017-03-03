@@ -93,7 +93,7 @@ class Shows extends React.Component {
                     <p className='h2'>
                       {moment(show.acf.date, 'YYYYMMDD').format('MMMM D, YYYY')}
                     </p>
-                    <p className='label'>
+                    <p className='label gutter-row--sm'>
                       {show.title.rendered}
                     </p>
 
@@ -140,7 +140,7 @@ class Shows extends React.Component {
                     <p className='h2'>
                       {moment(show.acf.date, 'YYYYMMDD').format('MMMM D, YYYY')}
                     </p>
-                    <p className='label'>
+                    <p className='label gutter-row--sm'>
                       {show.title.rendered}
                     </p>
 

@@ -1,18 +1,3 @@
 .listen-link__container {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
   text-decoration: none;
-}
-
-.listen-link__text {
-  @extend %font-default-strong;
-
-  text-transform: uppercase;
-  transform:
-    rotate(-15deg)
-    translateX($unit)
-    translateY($unit / 2)
-  ;
-  writing-mode: vertical-rl;
 }

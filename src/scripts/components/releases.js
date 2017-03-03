@@ -58,11 +58,11 @@ class Shows extends React.Component {
           >
             <div
               className='release__background'
-              style={{backgroundImage: 'url(' + release.acf.cover.url + ')'}}
+              style={{backgroundImage: 'url(' + release.acf.cover.sizes.medium + ')'}}
             ></div>
             <div className='release__meta-container'>
               <div className='release__meta-img-container'>
-                <img src={release.acf.cover.url} />
+                <img src={release.acf.cover.sizes.medium} />
               </div>
               <div className='release__meta-info'>
                 <h2 className='h2'>
@@ -81,7 +81,7 @@ class Shows extends React.Component {
                     <svg className='listen-link__icon icon'>
                       <use xlinkHref='#soundcloud' />
                     </svg>
-                    <span className='listen-link__text'>
+                    <span className='visuallyhidden listen-link__text'>
                       Soundcloud
                     </span>
                   </a>
@@ -91,7 +91,7 @@ class Shows extends React.Component {
                     <svg className='listen-link__icon icon'>
                       <use xlinkHref='#bandcamp' />
                     </svg>
-                    <span className='listen-link__text'>
+                    <span className='visuallyhidden listen-link__text'>
                       Bandcamp
                     </span>
                   </a>
@@ -101,7 +101,7 @@ class Shows extends React.Component {
                     <svg className='listen-link__icon icon'>
                       <use xlinkHref='#spotify' />
                     </svg>
-                    <span className='listen-link__text'>
+                    <span className='visuallyhidden listen-link__text'>
                       Spotify
                     </span>
                   </a>
@@ -111,7 +111,7 @@ class Shows extends React.Component {
                     <svg className='listen-link__icon icon'>
                       <use xlinkHref='#youtube' />
                     </svg>
-                    <span className='listen-link__text'>
+                    <span className='visuallyhidden listen-link__text'>
                       YouTube
                     </span>
                   </a>
@@ -121,7 +121,7 @@ class Shows extends React.Component {
                     <svg className='listen-link__icon icon'>
                       <use xlinkHref='#apple-music' />
                     </svg>
-                    <span className='listen-link__text'>
+                    <span className='visuallyhidden listen-link__text'>
                       Apple Music
                     </span>
                   </a>
@@ -131,7 +131,7 @@ class Shows extends React.Component {
                     <svg className='listen-link__icon icon'>
                       <use xlinkHref='#google-play' />
                     </svg>
-                    <span className='listen-link__text'>
+                    <span className='visuallyhidden listen-link__text'>
                       Google Play
                     </span>
                   </a>
@@ -141,7 +141,7 @@ class Shows extends React.Component {
                     <svg className='listen-link__icon icon'>
                       <use xlinkHref='#amazon-music' />
                     </svg>
-                    <span className='listen-link__text'>
+                    <span className='visuallyhidden listen-link__text'>
                       Amazon Music
                     </span>
                   </a>

@@ -8,26 +8,26 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  bottom: $unit / -2;
-  left: $unit / -2;
-  right: $unit / -2;
+  bottom: $unit / -4;
+  left: $unit / -4;
+  right: $unit / -4;
   opacity: .1;
   position: absolute;
-  top: $unit / -2;
+  top: $unit / -4;
   z-index: -1;
 
-  @supports (filter: blur($unit / 2)) {
-    filter: blur($unit / 2)
+  @supports (filter: blur($unit / 4)) {
+    filter: blur($unit / 4)
   }
 }
 
 .release__meta-container {
   display: flex;
-  padding: $unit;
+  padding: $unit $unit 0;
 }
 
 .release__meta-img-container {
-  max-width: $unit * 8;
+  max-width: 35%;
 }
 
 .release__meta-info {
@@ -40,4 +40,5 @@
 
 .release__listen-links-container {
   display: flex;
+  justify-content: space-between;
 }

@@ -75,12 +75,38 @@ class Shows extends React.Component {
 
     return (
       <section>
-        <h3>Future Shows</h3>
-        <ul>
+        <h3 className='h6'>Future Shows</h3>
+        <ul className='gutter-row--lg'>
           {this.state.futureShows.map(show =>
-            <li key={show.id}>
-              <p>{show.acf.date}</p>
-              <p>{show.title.rendered}</p>
+            <li
+              className='show__container'
+              key={show.id}
+            >
+              {show.acf.image &&
+                <div className='show__img-container'>
+                  <img src={show.acf.image.sizes.medium_large} />
+                </div>
+              }
+              <div className='show__info'>
+                <p className='h2'>
+                  {moment(show.acf.date, 'YYYYMMDD').format('MMMM D, YYYY')}
+                </p>
+                <p className='label'>
+                  {show.title.rendered}
+                </p>
+
+                <p>
+                  {show.acf.cost &&
+                    '$' + show.acf.cost + ', '
+                  }
+
+                  {show.acf.start_time} @ {show.acf.venue}
+
+                  (
+                    <a href={'http://maps.google.com/?q=' + show.acf.address.address}>directions</a>
+                  )
+                </p>
+              </div>
             </li>
           )}
         </ul>
@@ -91,12 +117,33 @@ class Shows extends React.Component {
 
         {this.state.displayPastShows &&
           <div>
-            <h3>Past Shows</h3>
+            <h3 className='h6'>Past Shows</h3>
             <ul>
               {this.state.pastShows.map(show =>
-                <li key={show.id}>
-                  <p>{show.acf.date}</p>
-                  <p>{show.title.rendered}</p>
+                <li
+                  className='show__container'
+                  key={show.id}
+                >
+                  {show.acf.image &&
+                    <div className='show__img-container'>
+                      <img src={show.acf.image.sizes.medium_large} />
+                    </div>
+                  }
+                  <div className='show__info'>
+                    <p className='h2'>
+                      {moment(show.acf.date, 'YYYYMMDD').format('MMMM D, YYYY')}
+                    </p>
+                    <p className='label'>
+                      {show.title.rendered}
+                    </p>
+
+                    <p>
+                      ${show.acf.cost}, {show.acf.time} @ {show.acf.venue}
+                      (
+                        <a href={'http://maps.google.com/?q=' + show.acf.address.address}>directions</a>
+                      )
+                    </p>
+                  </div>
                 </li>
               )}
             </ul>

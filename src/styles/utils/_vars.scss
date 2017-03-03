@@ -5,13 +5,8 @@ $color-text: shade($color-primary, 30%);
 $color-text-inverse: tint($color-primary, 50%);
 $color-background: hsl(0, 0%, 100%);
 $color-lowlight: tint($color-primary, 75%);
+$color-lowlight-bg: transparentize($color-lowlight, .5);
 $color-link: mix(hsl(200, 60%, 35%), $color-primary, 80%);
-
-
-// font stacks
-
-$font-default: 'museo-sans', serif;
-$font-display: 'utopia-std-display', serif;
 
 
 // layout
@@ -21,6 +16,16 @@ $border-width-md: 1.75em;
 $border-width-lg: 2.25em;
 $unit: 1em;
 $height-nav: $unit * 4;
+
+
+// type
+
+$font-default: 'museo-sans', serif;
+$font-display: 'utopia-std-display', serif;
+
+$font-size-sm: $unit * .8;
+$font-size-md: $unit;
+$font-size-lg: $unit * 2;
 
 
 // theme

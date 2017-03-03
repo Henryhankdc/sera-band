@@ -1,5 +1,5 @@
 .section {
   border: 1px solid $color-text-inverse;
-  margin: .5em;
-  padding: .5em;
+  margin: ($unit / 2) ($unit / 2) ($unit * 2);
+  padding: ($unit / 2);
 }

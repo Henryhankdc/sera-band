@@ -1,0 +1,15 @@
+.show__container {
+  border: 1px solid $color-lowlight;
+  background-color: $color-lowlight-bg;
+  display: flex;
+  padding: $unit;
+
+  &:not(:last-child) {
+    margin-bottom: $unit / 2;
+  }
+}
+
+.show__img-container {
+  max-width: 35%;
+  margin-right: $unit;
+}

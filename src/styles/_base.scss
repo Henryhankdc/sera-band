@@ -30,6 +30,18 @@ a:hover {
   color: $color-link;
 }
 
+button {
+  @extend %font-default-strong;
+
+  background-color: $color-link;
+  border-radius: 0;
+  border: 0;
+  color: $color-background;
+  font-size: $font-size-sm;
+  padding: $unit / 2;
+  width: auto;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -50,4 +62,16 @@ img {
   position: absolute;
   width: 1px;
   white-space: nowrap;
+}
+
+.gutter-row--sm {
+  margin-bottom: $unit / 2;
+}
+
+.gutter-row--md {
+  margin-bottom: $unit;
+}
+
+.gutter-row--lg {
+  margin-bottom: $unit * 2;
 }

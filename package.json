@@ -13,6 +13,8 @@
     "eslint-plugin-react": "^6.10.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^3.0.3",
+    "gulp-htmlmin": "^3.0.0",
     "gulp-inject": "^4.2.0",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^1.11.1",
@@ -26,9 +28,13 @@
     "rollup-plugin-commonjs": "^7.0.0",
     "rollup-plugin-eslint": "^3.0.0",
     "rollup-plugin-node-resolve": "^2.0.0",
-    "rollup-plugin-replace": "^1.1.1"
+    "rollup-plugin-replace": "^1.1.1",
+    "rollup-plugin-uglify": "^1.0.1",
+    "uglify-js": "^2.8.5"
   },
   "scripts": {
+    "build": "gulp build",
+    "buildProd": "gulp buildProd",
     "clean": "gulp clean",
     "scripts": "gulp scripts",
     "serve": "gulp serve",

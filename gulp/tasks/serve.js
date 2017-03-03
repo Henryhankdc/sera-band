@@ -5,7 +5,7 @@ const config = require('../config');
 const gulp = require('gulp');
 
 // Static server
-gulp.task('serve', ['sprite', 'scripts', 'styles'], function() {
+gulp.task('serve', ['build'], function() {
   bs.init({
     open: 'external',
     port: 3001,

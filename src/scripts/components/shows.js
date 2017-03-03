@@ -97,14 +97,17 @@ class Shows extends React.Component {
                       {show.title.rendered}
                     </p>
 
-                    <p>
+                    <p className='h5'>
                       {show.acf.cost &&
-                        '$' + show.acf.cost + ', '
+                        <span>
+                          <strong>
+                            ${show.acf.cost}
+                          </strong>
+                          ,&nbsp;
+                        </span>
                       }
-
-                      {show.acf.start_time} @ {show.acf.venue}
-
-                      (
+                      {show.acf.start_time} <strong>@</strong> {show.acf.venue}
+                      &nbsp;(
                         <a href={'http://maps.google.com/?q=' + show.acf.address.address}>directions</a>
                       )
                     </p>
@@ -141,9 +144,17 @@ class Shows extends React.Component {
                       {show.title.rendered}
                     </p>
 
-                    <p>
-                      ${show.acf.cost}, {show.acf.time} @ {show.acf.venue}
-                      (
+                    <p className='h5'>
+                      {show.acf.cost &&
+                        <span>
+                          <strong>
+                            ${show.acf.cost}
+                          </strong>
+                          ,&nbsp;
+                        </span>
+                      }
+                      {show.acf.start_time} <strong>@</strong> {show.acf.venue}
+                      &nbsp;(
                         <a href={'http://maps.google.com/?q=' + show.acf.address.address}>directions</a>
                       )
                     </p>

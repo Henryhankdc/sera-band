@@ -19,6 +19,10 @@ body {
     @extend %font-default-em;
   }
 
+  strong {
+    @extend %font-default-strong;
+  }
+
   @supports (text-rendering: optimizeLegibility) {
     text-rendering: optimizeLegibility;
   }

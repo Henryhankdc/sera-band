@@ -1,8 +1,16 @@
-# Será: Separate / Desperate
+# Será
 
-## TODO
+The official website of Será
 
-* add scripts
-* add styles
-* https://github.com/joshbuchea/HEAD
-* https://css-tricks.com/svg-sprites-use-better-icon-fonts/#comment-1580217
+## Develop
+
+1. [Install NVM](https://github.com/creationix/nvm#install-script)
+- `nvm install`
+- `npm i`
+- `npm run serve`
+
+## Build production
+
+1. `npm run buildProd`
+- `cd .tmp`
+- `http-server` to check (install with `npm i -g http-server`)

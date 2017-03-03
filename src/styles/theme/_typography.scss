@@ -7,35 +7,82 @@
 %font-default {
   @extend %all-fonts;
 
-  font-family: $font-display;
+  font-family: $font-default;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 100;
+}
+
+%font-default {
+  @extend %all-fonts;
+
+  font-family: $font-default;
+  font-style: normal;
+  font-weight: 100;
 }
 
 %font-default-em {
   @extend %all-fonts;
 
-  font-family: $font-display;
+  font-family: $font-default;
   font-style: italic;
+  font-weight: 100;
+}
+
+%font-default-strong {
+  @extend %all-fonts;
+
+  font-family: $font-default;
+  font-style: normal;
+  font-weight: 500;
+}
+
+%font-display {
+  @extend %all-fonts;
+
+  font-family: $font-display;
+  font-style: normal;
   font-weight: 400;
 }
 
 .h1 {
-  @extend %font-default;
+  @extend %font-default-strong;
 
-  font-size: 1.7em;
+  border-bottom: 1px solid $color-text-inverse;
+  font-size: 2em;
   line-height: 1;
-  margin-bottom: 0;
+  margin-bottom: $unit * 1;
   margin-top: 0;
+  padding-bottom: $unit / 4;
   text-transform: uppercase;
+  width: $unit * 2;
 }
 
 .h2 {
-  @extend %font-default;
+  @extend %font-default-strong;
 
   font-size: 1em;
   line-height: 1;
+  margin: 0;
+}
+
+.h6 {
+  @extend %font-default-strong;
+
+  border-bottom: 1px solid $color-text-inverse;
+  font-size: 1em;
+  line-height: 1;
+  margin-bottom: $unit * 1;
+  margin-top: 0;
+  padding-bottom: $unit / 4;
   text-transform: uppercase;
+  width: $unit * 2;
+}
+
+.label {
+  @extend %font-default-em;
+
+  font-size: .8em;
+  margin: 0;
 }
 
 .body {
@@ -45,9 +92,11 @@
 }
 
 .type-display {
+  @extend %font-display;
+
   text-transform: uppercase;
   text-align: center;
-  font-size: 10em;
+  font-size: 40vw;
   margin: 0;
-  line-height: 1;
+  line-height: 1.2;
 }

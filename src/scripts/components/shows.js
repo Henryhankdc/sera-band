@@ -108,8 +108,8 @@ class Shows extends React.Component {
 
   render() {
     return (
-      <section>
-        <h2>Shows</h2>
+      <section className='section'>
+        <h2 className='h1'>Shows</h2>
         {this.state.loading ?
           this.renderLoading()
           : this.renderPosts()}

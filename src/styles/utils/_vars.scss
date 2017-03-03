@@ -2,15 +2,15 @@
 
 $color-primary: hsl(231, 6%, 53%);
 $color-text: shade($color-primary, 30%);
-$color-text-inverse: tint($color-primary, 20%);
+$color-text-inverse: tint($color-primary, 50%);
 $color-background: hsl(0, 0%, 100%);
-$color-background-translucent: transparentize(hsl(0, 0%, 100%), 0.1);
+$color-lowlight: tint($color-primary, 75%);
 $color-link: mix(hsl(200, 60%, 35%), $color-primary, 80%);
 
 
 // font stacks
 
-$font-default: 'utopia-std', serif;
+$font-default: 'museo-sans', serif;
 $font-display: 'utopia-std-display', serif;
 
 

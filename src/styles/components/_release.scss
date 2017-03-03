@@ -1,0 +1,43 @@
+.release__container {
+  border: 1px solid $color-lowlight;
+  overflow: hidden;
+  position: relative;
+}
+
+.release__background {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  bottom: $unit / -2;
+  left: $unit / -2;
+  right: $unit / -2;
+  opacity: .1;
+  position: absolute;
+  top: $unit / -2;
+  z-index: -1;
+
+  @supports (filter: blur($unit / 2)) {
+    filter: blur($unit / 2)
+  }
+}
+
+.release__meta-container {
+  display: flex;
+  padding: $unit;
+}
+
+.release__meta-img-container {
+  max-width: $unit * 8;
+}
+
+.release__meta-info {
+  padding-left: $unit;
+}
+
+.release__listen-container {
+  padding: $unit;
+}
+
+.release__listen-links-container {
+  display: flex;
+}

@@ -22,6 +22,10 @@ body {
   @supports (text-rendering: optimizeLegibility) {
     text-rendering: optimizeLegibility;
   }
+
+  @media #{$mq-sm} {
+    font-size: 120%;
+  }
 }
 
 a,
@@ -37,7 +41,9 @@ button {
   border-radius: 0;
   border: 0;
   color: $color-background;
+  cursor: pointer;
   font-size: $font-size-sm;
+  outline: none;
   padding: $unit / 2;
   width: auto;
 }
@@ -62,16 +68,4 @@ img {
   position: absolute;
   width: 1px;
   white-space: nowrap;
-}
-
-.gutter-row--sm {
-  margin-bottom: $unit / 2;
-}
-
-.gutter-row--md {
-  margin-bottom: $unit;
-}
-
-.gutter-row--lg {
-  margin-bottom: $unit * 2;
 }

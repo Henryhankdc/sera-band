@@ -1,5 +1,15 @@
 .section {
   border: 1px solid $color-text-inverse;
-  margin: ($unit / 2) ($unit / 2) ($unit * 2);
+  margin: 0 ($unit / 2) ($unit * 2);
   padding: ($unit / 2);
+  max-width: $unit * 20;
+  width: calc(100% - #{$unit});
+
+  @media #{$mq-lg} {
+    width: calc(50% - #{$unit});
+  }
+
+  @media #{$mq-xl} {
+    width: calc(percentage(1/3) - #{$unit});
+  }
 }

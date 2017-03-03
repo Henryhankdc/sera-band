@@ -99,4 +99,8 @@
   font-size: 40vw;
   margin: 0;
   line-height: 1.2;
+
+  @media #{$mq-md} {
+    font-size: $unit * 10;
+  }
 }

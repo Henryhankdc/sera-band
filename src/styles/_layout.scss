@@ -1,0 +1,35 @@
+main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  @media #{$mq-lg} {
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  @media #{$mq-xl} {
+    justify-content: flex-end;
+    padding-right: $unit / 2;
+    padding-top: $unit;
+  }
+}
+
+header {
+  @media #{$mq-xl} {
+    position: fixed;
+  }
+}
+
+.gutter-row--sm {
+  margin-bottom: $unit / 2;
+}
+
+.gutter-row--md {
+  margin-bottom: $unit;
+}
+
+.gutter-row--lg {
+  margin-bottom: $unit * 2;
+}

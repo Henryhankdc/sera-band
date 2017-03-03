@@ -6,9 +6,13 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h1 className="type-display">Será</h1>
-        <Releases />
-        <Shows />
+        <header>
+          <h1 className='type-display'>Será</h1>
+        </header>
+        <main>
+          <Releases />
+          <Shows />
+        </main>
       </div>
     );
   }

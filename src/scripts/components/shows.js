@@ -75,41 +75,45 @@ class Shows extends React.Component {
 
     return (
       <section>
-        <h3 className='h6'>Future Shows</h3>
-        <ul className='gutter-row--lg'>
-          {this.state.futureShows.map(show =>
-            <li
-              className='show__container'
-              key={show.id}
-            >
-              {show.acf.image &&
-                <div className='show__img-container'>
-                  <img src={show.acf.image.sizes.medium_large} />
-                </div>
-              }
-              <div className='show__info'>
-                <p className='h2'>
-                  {moment(show.acf.date, 'YYYYMMDD').format('MMMM D, YYYY')}
-                </p>
-                <p className='label'>
-                  {show.title.rendered}
-                </p>
-
-                <p>
-                  {show.acf.cost &&
-                    '$' + show.acf.cost + ', '
+        {this.state.futureShows &&
+          <div>
+            <h3 className='h6'>Future Shows</h3>
+            <ul className='gutter-row--lg'>
+              {this.state.futureShows.map(show =>
+                <li
+                  className='show__container'
+                  key={show.id}
+                >
+                  {show.acf.image &&
+                    <div className='show__img-container'>
+                      <img src={show.acf.image.sizes.medium_large} />
+                    </div>
                   }
+                  <div className='show__info'>
+                    <p className='h2'>
+                      {moment(show.acf.date, 'YYYYMMDD').format('MMMM D, YYYY')}
+                    </p>
+                    <p className='label'>
+                      {show.title.rendered}
+                    </p>
 
-                  {show.acf.start_time} @ {show.acf.venue}
+                    <p>
+                      {show.acf.cost &&
+                        '$' + show.acf.cost + ', '
+                      }
 
-                  (
-                    <a href={'http://maps.google.com/?q=' + show.acf.address.address}>directions</a>
-                  )
-                </p>
-              </div>
-            </li>
-          )}
-        </ul>
+                      {show.acf.start_time} @ {show.acf.venue}
+
+                      (
+                        <a href={'http://maps.google.com/?q=' + show.acf.address.address}>directions</a>
+                      )
+                    </p>
+                  </div>
+                </li>
+              )}
+            </ul>
+          </div>
+        }
 
         {!this.state.displayPastShows &&
           <button onClick={this.togglePastShows}>Browse Past Shows</button>

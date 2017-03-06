@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios/dist/axios';
 import moment from 'moment';
+import Show from './show';
 
 class Shows extends React.Component {
   constructor(props) {
@@ -80,39 +81,10 @@ class Shows extends React.Component {
             <h3 className='h6'>Upcoming Shows</h3>
             <ul className='gutter-row--lg'>
               {this.state.futureShows.map(show =>
-                <li
-                  className='show__container'
+                <Show
                   key={show.id}
-                >
-                  {show.acf.image &&
-                    <div className='show__img-container'>
-                      <img src={show.acf.image.sizes.medium_large} />
-                    </div>
-                  }
-                  <div className='show__info'>
-                    <p className='h2'>
-                      {moment(show.acf.date, 'YYYYMMDD').format('MMMM D, YYYY')}
-                    </p>
-                    <p className='label gutter-row--sm'>
-                      {show.title.rendered}
-                    </p>
-
-                    <p className='h5'>
-                      {show.acf.cost &&
-                        <span>
-                          <strong>
-                            ${show.acf.cost}
-                          </strong>
-                          ,&nbsp;
-                        </span>
-                      }
-                      {show.acf.start_time} <strong>@</strong> {show.acf.venue}
-                      &nbsp;(
-                        <a href={'http://maps.google.com/?q=' + show.acf.address.address}>directions</a>
-                      )
-                    </p>
-                  </div>
-                </li>
+                  show={show}
+                />
               )}
             </ul>
           </div>
@@ -127,39 +99,10 @@ class Shows extends React.Component {
             <h3 className='h6'>Past Shows</h3>
             <ul>
               {this.state.pastShows.map(show =>
-                <li
-                  className='show__container'
+                <Show
                   key={show.id}
-                >
-                  {show.acf.image &&
-                    <div className='show__img-container'>
-                      <img src={show.acf.image.sizes.medium_large} />
-                    </div>
-                  }
-                  <div className='show__info'>
-                    <p className='h2'>
-                      {moment(show.acf.date, 'YYYYMMDD').format('MMMM D, YYYY')}
-                    </p>
-                    <p className='label gutter-row--sm'>
-                      {show.title.rendered}
-                    </p>
-
-                    <p className='h5'>
-                      {show.acf.cost &&
-                        <span>
-                          <strong>
-                            ${show.acf.cost}
-                          </strong>
-                          ,&nbsp;
-                        </span>
-                      }
-                      {show.acf.start_time} <strong>@</strong> {show.acf.venue}
-                      &nbsp;(
-                        <a href={'http://maps.google.com/?q=' + show.acf.address.address}>directions</a>
-                      )
-                    </p>
-                  </div>
-                </li>
+                  show={show}
+                />
               )}
             </ul>
           </div>

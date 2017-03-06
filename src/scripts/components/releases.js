@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios/dist/axios';
 import moment from 'moment';
+import ListenLink from './listenLink';
 
 class Shows extends React.Component {
   constructor(props) {
@@ -76,76 +77,41 @@ class Shows extends React.Component {
             <div className='release__listen-container'>
               <p className='h6'>Listen:</p>
               <ul className='release__listen-links-container'>
-                <li>
-                  <a className='listen-link__container' href={release.acf.soundcloud_link}>
-                    <svg className='listen-link__icon icon'>
-                      <use xlinkHref='#soundcloud' />
-                    </svg>
-                    <span className='visuallyhidden listen-link__text'>
-                      Soundcloud
-                    </span>
-                  </a>
-                </li>
-                <li>
-                  <a className='listen-link__container' href={release.acf.bandcamp_link}>
-                    <svg className='listen-link__icon icon'>
-                      <use xlinkHref='#bandcamp' />
-                    </svg>
-                    <span className='visuallyhidden listen-link__text'>
-                      Bandcamp
-                    </span>
-                  </a>
-                </li>
-                <li>
-                  <a className='listen-link__container' href={release.acf.spotify_link}>
-                    <svg className='listen-link__icon icon'>
-                      <use xlinkHref='#spotify' />
-                    </svg>
-                    <span className='visuallyhidden listen-link__text'>
-                      Spotify
-                    </span>
-                  </a>
-                </li>
-                <li>
-                  <a className='listen-link__container' href={release.acf.youtube_link}>
-                    <svg className='listen-link__icon icon'>
-                      <use xlinkHref='#youtube' />
-                    </svg>
-                    <span className='visuallyhidden listen-link__text'>
-                      YouTube
-                    </span>
-                  </a>
-                </li>
-                <li>
-                  <a className='listen-link__container' href={release.acf.apple_music_link}>
-                    <svg className='listen-link__icon icon'>
-                      <use xlinkHref='#apple-music' />
-                    </svg>
-                    <span className='visuallyhidden listen-link__text'>
-                      Apple Music
-                    </span>
-                  </a>
-                </li>
-                <li>
-                  <a className='listen-link__container' href={release.acf.google_play_link}>
-                    <svg className='listen-link__icon icon'>
-                      <use xlinkHref='#google-play' />
-                    </svg>
-                    <span className='visuallyhidden listen-link__text'>
-                      Google Play
-                    </span>
-                  </a>
-                </li>
-                <li>
-                  <a className='listen-link__container' href={release.acf.amazon_music_link}>
-                    <svg className='listen-link__icon icon'>
-                      <use xlinkHref='#amazon-music' />
-                    </svg>
-                    <span className='visuallyhidden listen-link__text'>
-                      Amazon Music
-                    </span>
-                  </a>
-                </li>
+                <ListenLink
+                  iconId='soundcloud'
+                  link={release.acf.soundcloud_link}
+                  text='Soundcloud'
+                />
+                <ListenLink
+                  iconId='bandcamp'
+                  link={release.acf.bandcamp_link}
+                  text='Bandcamp'
+                />
+                <ListenLink
+                  iconId='spotify'
+                  link={release.acf.spotify_link}
+                  text='Spotify'
+                />
+                <ListenLink
+                  iconId='youtube'
+                  link={release.acf.youtube_link}
+                  text='Youtube'
+                />
+                <ListenLink
+                  iconId='apple-music'
+                  link={release.acf.apple_music_link}
+                  text='Apple Music'
+                />
+                <ListenLink
+                  iconId='google-play'
+                  link={release.acf.google_play_link}
+                  text='Google Play'
+                />
+                <ListenLink
+                  iconId='amazon-music'
+                  link={release.acf.amazon_music_link}
+                  text='Amazon Music'
+                />
               </ul>
             </div>
           </li>
